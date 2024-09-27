@@ -1,0 +1,21 @@
+1. Criar o package.json: npm init -y
+
+2. Criar o server.js
+
+3. Instalar o express: npm i express
+
+Ao tentar executar o arquivo utilizando "import" no express, deu um erro. Para corrigí-lo, foi adicionado ao package.json o parâmetro ""type": "module""
+
+4. Instalar o prisma para servir de orm para utilizar o mongodb: "npm i prisma --save-dev"
+
+5. Inicializar o prisma. Isso criará uma pasta "Prisma". E dentro dela terá um arquivo "schema.prisma": "npx prisma init"
+
+6. Dentro da schema.prisma, irei incluir a string de conexão do mongodb, incluindo na mesma, a senha e o nome do banco de dados. Dentro dessa pasta também é onde ficarão os models das tabelas do banco de dados
+
+7. Para que o arquivo schema.prisma ficasse com o template correto, tive que instalar a extensão do Prisma dentro do VS Code
+
+8. Depois de configurar o model da tabela no arquivo schema.prisma, se faz necessário rodar um comando para sincronizar o prisma com o banco de dados: npx prisma db push
+
+9. Para finalizar a parte de conexão com o banco de dados, deve-se rodar o comando: npm i @prisma/cliente
+
+10. Ao rodar esse comando, é aberto uma página no navegador, onde será possível gerenciar os dados do banco de dados: npx prisma studio
